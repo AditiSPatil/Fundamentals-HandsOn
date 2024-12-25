@@ -1,6 +1,6 @@
 # L05-06
 
-We want to containerize a simple HTML page.  To do that you’ll need to create a Dockerfile.
+We want to containerize a simple HTML page. To do that you’ll need to create a Dockerfile.
 
 ## Add a Dockerfile file
 
@@ -13,7 +13,20 @@ Copy and paste the following in the file and save it:
 
 ## Build the image
 
-    docker build -t hello-world:v1 .
+    docker build -t your-image-name:tag-name -f /path/to/Dockerfile /path/to/build-context
+    eg:1 docker build -t myapp-image -f C:\name\users\Documents\x1.dockerfile C:\name\users\Projects
+    Note: tag-name is optional
+    eg:2 docker build -t nginx-image:v1 -f "x1.dockerfile" .
+    Note: In case of eg:-2, if build context and x1 file is in same folder from where you run docker build
+
+### Multiple Build Contexts
+
+    Docker also supports multiple build contexts, allowing you to use files from different directories. This can be done using the --build-context option with Docker BuildKit1.
+
+    Example with Multiple Build Contexts
+    docker build --build-context project1=C:\name\users\Projects1 --build-context project2=C:\name\users\Projects2 -t myapp-image .
+
+    In this example, project1 and project2 are named build contexts that you can reference in your Dockerfile.
 
 ## list the images
 
