@@ -16,12 +16,20 @@
 
     docker exec -it voltest bash
 
+    If Docker container you're trying to access doesn't have bash installed, its a common issue and can be resolved by using sh instead of bash. Here's how you can do it:
+    docker exec -it <container_name> /bin/sh
+    Replace <container_name> with the name of your container. This command uses sh, which is typically available in most containers
+
 ## Let’s create a file in the volume using Nano
 
-    apt-get update
-    apt-get install nano
+    apt-get update # For Debian/Ubuntu-based containers
+    apt-get install nano # For Debian/Ubuntu-based containers
+
+    apk update # For Alpine-based containers
+    apk add nano # For Alpine-based containers
 
 ## Create a file in the app folder
+
     cd app
     nano test.txt
 

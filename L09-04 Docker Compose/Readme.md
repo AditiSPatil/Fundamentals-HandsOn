@@ -3,13 +3,14 @@
 ## Build the app
 
     docker compose build
+    If the docker-compose.yaml file is located in a different folder, then use 'docker compose build -f /path/to/docker-compose.yaml'
 
 ## Run the app
 
     docker compose up -d
 
+This command builds and runs the containers specified in docker-cpmpose.yaml file. The above command (viz. docker compose build) is explicitly used to build the project.
 When the app will run, launch the voting app in your browser http://localhost:5000
-
 
 ## List the containers
 
@@ -18,7 +19,6 @@ When the app will run, launch the voting app in your browser http://localhost:50
 ## Look at the db container logs
 
     docker compose logs -f web-fe
-
 
 ## Compose V2 commands
 
