@@ -1,5 +1,6 @@
 # L18-04
 
+There are two ways to create resources in kubernetes - imperative and declarative.
 Let's deploy an Nginx container using both methods.
 
 ## Imperative
@@ -9,6 +10,10 @@ Let's deploy an Nginx container using both methods.
 ## Declarative
 
     kubectl create -f deploy-example.yaml
+
+## Get list of active deployments
+
+    kubectl get deploy
 
 ## Cleanup
 
