@@ -8,7 +8,8 @@ Let’s first create a node running Nginx by using the imperative way.
 
 ## Get a list of running pods
 
-    kubectl get pods
+    kubectl get pods //gets pods in default namespace
+    kubectl get pods -n <namespace>
 
 ## Get more info
 

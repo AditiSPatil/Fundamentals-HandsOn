@@ -8,9 +8,12 @@ Get the current context:
 
 ## List all contexts
 
+To list the clusters in your Kubernetes environment, you can use the kubectl command-line tool. Here is the command you need:
 List all the contexts:
 
     kubectl config get-contexts
+
+This command will display all the contexts (clusters) configured in your kubeconfig file. Each context represents a cluster and a user.
 
 ## Change context
 
@@ -20,7 +23,7 @@ Use a context:
 
 ## Using kubectx
 
-What's great about Kubernetes is the incredible amount of tools created by the community and available for free.  Kubectx is a simple tool that provides an easy way to list and change context.
+What's great about Kubernetes is the incredible amount of tools created by the community and available for free. Kubectx is a simple tool that provides an easy way to list and change context.
 
 You can install it on:
 
