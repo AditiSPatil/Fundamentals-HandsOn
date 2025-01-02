@@ -1,0 +1,15 @@
+## Need for Init-Containers
+
+Init-Containers are used to initialize a pod before an application container runs.
+Lets say, your app has dependecy on one or more services - DB, API, some service and requires these dependencies to exist/started before the main applicaion container runs.
+You can also add logic in your application code to validate if the required dependencies exists BUT if you dont want to clutter your business logic(main application's code) with such validation checks then you can use init containers.
+
+### Charactertics of Init-Containers
+
+![alt text](image.png)
+![alt text](image-1.png)
+
+## Define Init-Containers
+
+They are defined in the Pod declaration(viz. in yaml file). The defined init containers will run one by one before the application container runs.
+![alt text](image-2.png)
