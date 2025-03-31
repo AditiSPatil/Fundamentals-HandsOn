@@ -1,7 +1,9 @@
 name: Bug Report
 description: File a bug report.
 labels: ["bug"]
-projects: ["forkedRepoProj"]
+projects: 
+  - forkedRepoProj
+issue_type: Bug
 body:
   - type: textarea
     id: what-happened
