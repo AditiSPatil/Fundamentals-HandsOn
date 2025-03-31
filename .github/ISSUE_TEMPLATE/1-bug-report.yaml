@@ -3,7 +3,6 @@ description: File a bug report.
 labels: ["bug"]
 projects: 
   - forkedRepoProj
-type: Bug
 body:
   - type: textarea
     id: what-happened
